@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Instagram Voice Comments</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>Instagram</h1>
+            <span>♡</span>
+        </header>
+
+        <!-- Post -->
+        <div class="post">
+
+            <div class="post-header">
+                <div class="avatar">M</div>
+                <div>
+                    <strong>madara_official</strong>
+                    <small>Original post</small>
+                </div>
+                <span class="dots">•••</span>
+            </div>
+
+            <div class="post-image">
+                <div class="image-text">
+                    <span>YOUR DREAM</span>
+                    <h2>IS BIGGER<br>
+                        THAN YOUR<br>
+                        PROBLEM</h2>
+                    <p>Never give up 🔥</p>
+                </div>
+            </div>
+
+            <div class="post-actions">
+                <button id="postLike">♡</button>
+                <button id="commentFocus">💬</button>
+                <button>➤</button>
+                <span>♧</span>
+            </div>
+
+            <p class="likes">
+                <strong id="postLikes">120</strong> likes
+            </p>
+
+            <p class="caption">
+                <strong>madara_official</strong>
+                Believe in yourself 💯
+            </p>
+
+        </div>
+
+        <!-- Comments -->
+        <section class="comments">
+
+            <h2>Comments</h2>
+
+            <div id="commentList"></div>
+
+            <!-- Recording preview -->
+            <div id="recordingBox" class="recording-box hidden">
+
+                <div class="recording-info">
+                    <span class="record-dot"></span>
+                    <span id="timer">00:00</span>
+                    <span>Recording...</span>
+                </div>
+
+                <div class="waveform" id="waveform">
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                </div>
+
+                <div class="record-buttons">
+                    <button id="cancelRecord">Delete</button>
+                    <button id="stopRecord">Stop</button>
+                </div>
+
+            </div>
+
+            <!-- Audio preview -->
+            <div id="previewBox" class="preview-box hidden">
+
+                <audio id="audioPreview" controls></audio>
+
+                <div class="preview-buttons">
+                    <button id="deleteAudio">Delete</button>
+                    <button id="sendAudio">Send voice</button>
+                </div>
+
+            </div>
+
+            <!-- Comment input -->
+            <div class="comment-input">
+
+                <div class="avatar small">M</div>
+
+                <input
+                    type="text"
+                    id="commentInput"
+                    placeholder="Add a comment..."
+                    maxlength="500">
+
+                <button id="sendComment">Post</button>
+
+                <button id="micButton" title="Record voice comment">
+                    🎙️
+                </button>
+
+            </div>
+
+            <p class="mic-help">
+                Tap the microphone to record a voice comment.
+            </p>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

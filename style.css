@@ -1,0 +1,333 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 16px;
+}
+
+.app {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    min-height: 100vh;
+    background: #000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    border-bottom: 1px solid #262626;
+}
+
+.header h1 {
+    font-family: cursive;
+    font-size: 28px;
+}
+
+.header span {
+    font-size: 30px;
+}
+
+/* Post */
+
+.post {
+    border-bottom: 1px solid #262626;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff9800, #e91e63, #9c27b0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.post-header small {
+    display: block;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+.dots {
+    margin-left: auto;
+}
+
+.post-image {
+    height: 340px;
+    background: linear-gradient(135deg, #151515, #343434);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image-text span {
+    color: #aaa;
+    letter-spacing: 5px;
+}
+
+.image-text h2 {
+    font-size: 38px;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.image-text p {
+    color: #aaa;
+}
+
+.post-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 12px;
+}
+
+.post-actions button {
+    font-size: 27px;
+}
+
+.post-actions span {
+    margin-left: auto;
+    font-size: 24px;
+}
+
+.likes,
+.caption {
+    padding: 0 12px 10px;
+    font-size: 14px;
+}
+
+.caption {
+    padding-bottom: 15px;
+}
+
+/* Comments */
+
+.comments {
+    padding: 15px;
+}
+
+.comments h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.comment {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.small {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+}
+
+.comment-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.comment-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.comment-content strong {
+    margin-right: 5px;
+}
+
+.comment-time {
+    color: #888;
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+.comment-like {
+    font-size: 18px;
+    color: #aaa;
+    padding: 4px;
+}
+
+.comment-like.liked {
+    color: #ff3040;
+}
+
+.voice-player {
+    margin-top: 8px;
+    width: 100%;
+    max-width: 280px;
+    height: 38px;
+}
+
+/* Input */
+
+.comment-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid #262626;
+    padding-top: 15px;
+}
+
+.comment-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 8px;
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.comment-input button {
+    color: #0095f6;
+    font-weight: bold;
+}
+
+.comment-input #micButton {
+    font-size: 24px;
+    padding: 5px;
+}
+
+.mic-help {
+    font-size: 11px;
+    color: #888;
+    margin: 12px 0;
+}
+
+/* Recording */
+
+.recording-box,
+.preview-box {
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.recording-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.record-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: red;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.2;
+    }
+}
+
+.waveform {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin: 15px 0;
+}
+
+.waveform span {
+    width: 4px;
+    height: 12px;
+    background: #0095f6;
+    border-radius: 5px;
+    animation: wave 0.7s infinite alternate;
+}
+
+.waveform span:nth-child(2n) {
+    animation-delay: 0.2s;
+}
+
+.waveform span:nth-child(3n) {
+    animation-delay: 0.4s;
+}
+
+@keyframes wave {
+    to {
+        height: 35px;
+    }
+}
+
+.record-buttons,
+.preview-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.record-buttons button,
+.preview-buttons button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: #333;
+}
+
+.record-buttons #stopRecord,
+.preview-buttons #sendAudio {
+    background: #0095f6;
+}
+
+.preview-box audio {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 400px) {
+    .post-image {
+        height: 280px;
+    }
+
+    .image-text h2 {
+        font-size: 30px;
+    }
+
+    .comments {
+        padding: 12px;
+    }
+}
